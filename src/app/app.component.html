@@ -1,0 +1,64 @@
+<div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content flex-col lg:flex-row" *ngIf="MainPageForm">
+    <div class="card bg-base-100 max-w-sm shrink-0 shadow-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset" [formGroup]="MainPageForm">
+          <div class="text-orange-600 italic" *ngIf="IsThisImportant">
+            This is important!
+          </div>
+          <label class="label">Name</label>
+          <input
+            type="text"
+            class="input"
+            placeholder="Name"
+            formControlName="name"
+          />
+          <label class="label">Type</label>
+          <ng-select
+            [items]="AvailableTypes"
+            bindLabel="label"
+            clearable="false"
+            formControlName="type"
+          >
+          </ng-select>
+
+          <label class="label">Is important?</label>
+          <input
+            type="checkbox"
+            checked="checked"
+            class="checkbox"
+            formControlName="isImportant"
+          />
+          <div class="flex flex-row gap-2">
+            <button class="btn btn-primary mt-4">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="text-center lg:text-left">
+      <h1 class="text-3xl font-bold">Innovations Day May 2025</h1>
+      <div class="pt-5 italic">Values saved in form</div>
+      <div class="pt-5">
+        Name: <b>{{ MainPageForm.controls["name"]?.value }}</b>
+      </div>
+      <div class="pt-2">
+        Type: <b>{{ MainPageForm.controls["type"]?.value }}</b>
+      </div>
+      <div class="pt-2">
+        Is important: <b>{{ MainPageForm.controls["isImportant"]?.value }}</b>
+      </div>
+      <div class="pt-2">
+        Description: <b>{{ MainPageForm.controls["description"]?.value }}</b>
+      </div>
+
+      <!-- <div class="pt-2">
+        Values:
+        <ul class="list-disc ml-5">
+          <li *ngFor="let value of getRecordTypeValue('valueX')">
+            {{ value?.label }}
+          </li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+</div>

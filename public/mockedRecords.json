@@ -1,0 +1,37 @@
+[
+    {
+        "formControlName": "name",
+        "formValue": "\"innovation\"",
+        "id": 1234
+    },
+    {
+        "formControlName": "type",
+        "formValue": "{\"label\": \"general field\", \"value\":\"general\"}",
+        "id": 5678
+    },
+    {
+        "formControlName": "description",
+        "formValue": "\"just some random field\"",
+        "id": 9012
+    },
+    {
+        "formControlName": "isImportant",
+        "formValue": "true",
+        "id": 9012
+    },
+    {
+        "formControlName": "valueX",
+        "formValue": "[{\"label\": \"Value 1\", \"value\":\"X1\"},{\"label\": \"Value 2\", \"value\":\"X2\"},{\"label\": \"Value 3\", \"value\":\"X3\"}]",
+        "id": 9012
+    },
+    {
+        "formControlName": "valueY",
+        "formValue": "[{\"name\": \"Value A\", \"record_value\":\"YA\"},{\"name\": \"Value B\", \"record_value\":\"YB\"},{\"name\": \"Value C\", \"record_value\":\"YC\"}]",
+        "id": 9012
+    },
+    {
+        "formControlName": "valueZ",
+        "formValue": "{\"name\": \"Value A1\", \"record_value\":\"ZA1\"}",
+        "id": 9012
+    }
+]
